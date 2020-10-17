@@ -22,7 +22,7 @@ const variants = {
       justify-content: center;
       box-shadow: 0 18px 40px 0 rgba(0,0,0,0.04),
                   0 6px 12px 0 rgba(0,0,0,0.08);
-      ${({showZero, count}) => !showZero && count ===0 && `visibility: hidden`}
+      ${({showZero, count}) => !showZero && count === 0 && `visibility: hidden`}
 `
 }
 

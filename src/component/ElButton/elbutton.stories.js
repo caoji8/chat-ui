@@ -4,7 +4,7 @@ import '../../story.css'
 import {action} from "@storybook/addon-actions";
 
 export default {
-    title: 'ElButton',
+    title: 'Myself/ElButton',
     component: ElButton
 }
 

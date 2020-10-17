@@ -1,42 +1,44 @@
 import React from "react";
-import Icon from "./index";
-// webpack svg loader
-// svg作为组件引入
-import {ReactComponent as SmileIcon} from '../../assets/icon/smile.svg'
+import Icon from ".";
 
+import {
+  faCommentDots,
+  faFolder,
+  faStickyNote,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCommentDots, faFolder, faStickyNote } from '@fortawesome/free-solid-svg-icons'
+
+import { ReactComponent as SmileIcon } from "../../assets/icon/smile.svg";
 
 export default {
-    title: "UI 组件/icon",
-    component: Icon
-}
+  title: "UI组件/Icon",
+  component: Icon,
+};
 
-export const Default = () => {
-    return <Icon icon={SmileIcon} />
-}
+export const Default = () => <Icon icon={SmileIcon} />;
 
 export const CustomColor = () => {
-    return <Icon icon={SmileIcon} color='#ffffff' />
-}
+  return <Icon icon={SmileIcon} color="#cccccc" />;
+};
 
 export const CustomSize = () => {
-    return <Icon icon={SmileIcon} color='#ffffff' width={48} height={48} />
-}
+  return <Icon icon={SmileIcon} width={48} height={48} color="#cccccc" />;
+};
 
-export const FontAwesome= () => {
-    return <FontAwesomeIcon icon={faCommentDots} />
-}
-export const FontAwesomeColor= () => {
-    return <FontAwesomeIcon icon={faCommentDots} style={{color: '#ffffff'}} />
-}
-export const FontAwesomeSize= () => {
-    return (
-        <div>
-            <FontAwesomeIcon icon={faFolder} style={{color: '#ffffff',fontSize: '24px'}} />
-            <FontAwesomeIcon icon={faStickyNote} style={{color: '#ffffff',fontSize: '36px'}} />
-            <FontAwesomeIcon icon={faCommentDots} style={{color: '#ffffff',fontSize: '48px'}} />
+export const FontAwesome = () => {
+  return <FontAwesomeIcon icon={faCommentDots} />;
+};
 
-        </div>
-    )
-}
+export const FontAwesomeColor = () => {
+  return <FontAwesomeIcon icon={faCommentDots} style={{ color: "#cccccc" }} />;
+};
+
+export const FontAwesomeSizes = () => {
+  return (
+    <div>
+      <FontAwesomeIcon icon={faFolder} style={{ fontSize: "24px" }} />
+      <FontAwesomeIcon icon={faStickyNote} style={{ fontSize: "36px" }} />
+      <FontAwesomeIcon icon={faCommentDots} style={{ fontSize: "48px" }} />
+    </div>
+  );
+};

@@ -11,11 +11,11 @@ function App() {
 
   return (
     <div>
-        <Button label={'按钮'} width={'50px'} onClick={handleButtonClick1}>
+        {/*<Button label={'按钮'} width={'50px'} onClick={handleButtonClick1}>*/}
             <span>&gt;</span>
-        </Button>
+        {/*</Button>*/}
         <p style={{color: color}}>Text 1</p>
-        <Button label={'Click me'} width={'90px'} onClick={handleButtonClick2}/>
+        {/*<Button label={'Click me'} width={'90px'} onClick={handleButtonClick2}/>*/}
         <p style={{color: color2}}>Text 1</p>
     </div>
   );
