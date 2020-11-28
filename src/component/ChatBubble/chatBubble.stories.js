@@ -1,5 +1,7 @@
 import React from "react";
 import ChatBubble from "./index";
+import VoiceMessage from "../VoiceMessage";
+import Emoji from "../Emoji";
 
 export default {
     title: "UI组件/ChatBubble",
@@ -12,7 +14,9 @@ export const FromOthers = () => {
 }
 
 export const Mine = () => {
-    return <ChatBubble type={"mine"} time={"昨天 下午14:26"}>这是一条测试的消息</ChatBubble>
+    return <ChatBubble type={"mine"} time={"昨天 下午14:26"}>
+        这是一条测试的消息<Emoji label={"smile"}>🙂</Emoji>
+    </ChatBubble>
 }
 
 export const ManyDifferentChat = () => {
@@ -27,3 +31,14 @@ export const ManyDifferentChat = () => {
     )
 }
 
+export const VoiceMessageType = () => (
+    <ChatBubble time={"昨天 下午19:00"}>
+        <VoiceMessage time={"20:00"} />
+    </ChatBubble>
+)
+
+export const VoiceMessageTypeMine = () => (
+    <ChatBubble type={"mine"} time={"昨天 下午19:00"}>
+        <VoiceMessage type={"mine"} time={"20:00"} />
+    </ChatBubble>
+)

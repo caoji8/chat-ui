@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import StyledIcon from "./style";
+import SocialIcon from "./SocialIcon";
 
 function Icon({
                   icon: IconComponent,
@@ -16,6 +17,9 @@ function Icon({
         </StyledIcon>
     );
 }
+
+// 作为子组件导出
+Icon.Social = SocialIcon;
 
 Icon.propTypes = {
     // icon: PropTypes.element,

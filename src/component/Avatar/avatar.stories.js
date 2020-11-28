@@ -7,7 +7,7 @@ import face4 from '../../assets/images/face-4.jpg'
 import face5 from '../../assets/images/face-5.jpg'
 
 export default {
-    title: "UI 组件/Avatar",
+    title: "UI组件/Avatar",
     component: Avatar
 }
 
