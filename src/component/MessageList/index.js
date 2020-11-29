@@ -14,7 +14,7 @@ import MessageCard from "../MessageCard";
 import FilterList from "../FilterList";
 import { useTrail, animated } from "react-spring";
 import useStaggeredList from "../../hooks/useStaggeredList";
-
+import messageData from "../../data/messages"
 
 
 function MessageList ({children, ...rest}) {
@@ -25,19 +25,19 @@ function MessageList ({children, ...rest}) {
             <StyledMessageList { ...rest }>
                 <FilterList options={['最新消息优先','在线好友优先']} actionLabel={'创建会话'}>
                 <ChatList>
-                    {[1,2,3,4,5,6].map((_, index) => (
-                        <animated.div key={index} style={trailAnimes[index]}>
+                    {messageData.map((message, index) => (
+                        <animated.div key={message.id} style={trailAnimes[index]}>
                             <MessageCard
-                                avatarSrc={face1}
-                                key={index}
+                                avatarSrc={message.avatarSrc}
+                                key={message.id}
                                 active={index === 3}
-                                replied={ index % 3 ===0 }
-                                name={"测试用户"}
-                                avatarStatus={"online"}
-                                statusText={"在线"}
-                                time={"3 小时之前"}
-                                message={"测试文案,测试文案,测试文案,测试文案,测试文案,测试文案,测试文案,测试文案,测试文案,测试文案"}
-                                unreadCount={2} />
+                                replied={ message.replied }
+                                name={message.name}
+                                avatarStatus={message.status}
+                                statusText={message.statusText}
+                                time={message.time}
+                                message={message.message}
+                                unreadCount={message.unreadCount} />
                         </animated.div>
                     ))}
                 </ChatList>

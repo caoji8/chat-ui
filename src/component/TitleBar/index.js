@@ -16,9 +16,9 @@ import {DropdownItem} from "../Dropdown/style";
 import Seperator from "../Seperator";
 
 
-function TitleBar ({onAvatarClick, onVideoClicked, children, ...rest}) {
+function TitleBar ({animeProps, style,onAvatarClick, onVideoClicked, children, ...rest}) {
         return (
-            <StyledTitleBar { ...rest }>
+            <StyledTitleBar style={{...style, ...animeProps}} { ...rest }>
                 <Avatar onClick={onAvatarClick} src={face1} status={'offline'} />
                 <Title>
                     <Paragraph size={"large"}>测试离线用户</Paragraph>

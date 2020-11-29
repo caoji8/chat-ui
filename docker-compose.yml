@@ -1,0 +1,26 @@
+version: "3"
+services:
+  tomcat:
+    container_name: tomcat46
+    build: .
+    ports:
+      - "8888:8181"
+    depends_on:
+      - mysql
+    links:
+      - "mysql:mysql"
+    restart: always
+  mysql:
+    network_mode: "host"
+    image: mysql:5.7.32
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: book
+      MYSQL_ROOT_HOSE: '%'
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+    volumes:
+    - ./mysql/conf:/etc/mysql/conf.d
+    - ./mysql/db:/var/lib/mysql
+    restart: always
